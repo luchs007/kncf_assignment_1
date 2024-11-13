@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import 'package:url_launcher/url_launcher.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -15,6 +17,15 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+/*
+_makingPhoneCall() async {
+  var url = Uri.parse("tel:0123456789");
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url, mode: LaunchMode.externalApplication);
+  } else {
+    throw 'Could not launch $url';
+  }
+}*/
 
 class MyWidget extends StatelessWidget{
   @override
@@ -73,7 +84,7 @@ class MyWidget extends StatelessWidget{
                 Icon(Icons.accessibility,color: Colors.pinkAccent,),
                 Icon(Icons.timer),
                 Icon(Icons.phone_android, color: Colors.green[600],),
-                IconButton(onPressed: (){print("hallo");}, icon: const Icon(Icons.phone_iphone)),
+                IconButton(onPressed: (){}, icon: const Icon(Icons.phone_iphone)),
               ],
             ),
           ],
